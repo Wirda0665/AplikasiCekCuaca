@@ -168,6 +168,7 @@ private void loadCsvToTable(File f) throws Exception {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
+        lblJudul.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblJudul.setText("APLIKASI CEK CUACA");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -188,8 +189,12 @@ private void loadCsvToTable(File f) throws Exception {
 
         panel.setBackground(new java.awt.Color(204, 204, 204));
 
+        lblKota.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblKota.setText("KOTA");
 
+        txtKota.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        cmbKota.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cmbKota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbKota.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -197,6 +202,7 @@ private void loadCsvToTable(File f) throws Exception {
             }
         });
 
+        btnCek.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCek.setText("CEK CUACA");
         btnCek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,6 +210,7 @@ private void loadCsvToTable(File f) throws Exception {
             }
         });
 
+        btnFav.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnFav.setText("FAVORITE");
         btnFav.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,6 +218,7 @@ private void loadCsvToTable(File f) throws Exception {
             }
         });
 
+        btnSimpan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSimpan.setText("SIMPAN CSV");
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,6 +226,7 @@ private void loadCsvToTable(File f) throws Exception {
             }
         });
 
+        btnMuat.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMuat.setText("MUAT CSV");
         btnMuat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +247,7 @@ private void loadCsvToTable(File f) throws Exception {
         ));
         jScrollPane1.setViewportView(tblData);
 
+        btnClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnClear.setText("CLEAR");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +255,7 @@ private void loadCsvToTable(File f) throws Exception {
             }
         });
 
+        btnKeluar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnKeluar.setText("KELUAR");
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -362,7 +373,8 @@ private void loadCsvToTable(File f) throws Exception {
         // TODO add your handling code here:
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED && cmbKota.getSelectedIndex() > 0) {
         String kota = cmbKota.getSelectedItem().toString();
-        fetchAndDisplayWeather(kota);
+        txtKota.setText(kota);
+        //fetchAndDisplayWeather(kota);
     }
     }//GEN-LAST:event_cmbKotaItemStateChanged
 
